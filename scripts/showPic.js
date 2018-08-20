@@ -16,8 +16,6 @@ function countBodyChildren(){
 	alert (body_element.nodeType);
 }
 
-window.onload = countBodyChildren;
-
 function prepareGallery(){
 	if (!document.getElementById ||!document.getElementsByTagName){
 		return false;
@@ -27,7 +25,7 @@ function prepareGallery(){
 	}
 	var gallery=document.getElementById("imagegallery");
 	var links=gallery.getElementsByTagName("a");
-	for (var i=0,i < links.length,i++){
+	for (var i=0;i < links.length;i++){
 		links[i].onclick=function(){
 			return !showPic(this);
 		}
